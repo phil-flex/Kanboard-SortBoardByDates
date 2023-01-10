@@ -75,10 +75,34 @@
                                         <?= $this->url->icon('sort-alpha-desc', t('Reorder this column by assignee (Z-A)'), 'TaskReorderController', 'reorderColumn', ['sort' => 'assignee', 'direction' => 'desc', 'project_id' => $column['project_id'], 'column_id' => $column['id'], 'swimlane_id' => $swimlane['id']]) ?>
                                     </li>
                                     <li>
+                                        <?= $this->url->icon('sort-numeric-asc', t('Reorder this column by modification date (ASC)'), 'TaskReorderController', 'reorderColumn', ['sort' => 'date_modification', 'direction' => 'asc', 'project_id' => $column['project_id'], 'column_id' => $column['id'], 'swimlane_id' => $swimlane['id']]) ?>
+                                    </li>
+                                    <li>
+                                        <?= $this->url->icon('sort-numeric-desc', t('Reorder this column by modification date (DESC)'), 'TaskReorderController', 'reorderColumn', ['sort' => 'date_modification', 'direction' => 'desc', 'project_id' => $column['project_id'], 'column_id' => $column['id'], 'swimlane_id' => $swimlane['id']]) ?>
+                                    </li>
+                                    <li>
+                                        <?= $this->url->icon('sort-numeric-asc', t('Reorder this column by date started (ASC)'), 'TaskReorderController', 'reorderColumn', ['sort' => 'date_started', 'direction' => 'asc', 'project_id' => $column['project_id'], 'column_id' => $column['id'], 'swimlane_id' => $swimlane['id']]) ?>
+                                    </li>
+                                    <li>
+                                        <?= $this->url->icon('sort-numeric-desc', t('Reorder this column by date started (DESC)'), 'TaskReorderController', 'reorderColumn', ['sort' => 'date_started', 'direction' => 'desc', 'project_id' => $column['project_id'], 'column_id' => $column['id'], 'swimlane_id' => $swimlane['id']]) ?>
+                                    </li>
+                                    <li>
+                                        <?= $this->url->icon('sort-numeric-asc', t('Reorder this column by date moved (ASC)'), 'TaskReorderController', 'reorderColumn', ['sort' => 'date_moved', 'direction' => 'asc', 'project_id' => $column['project_id'], 'column_id' => $column['id'], 'swimlane_id' => $swimlane['id']]) ?>
+                                    </li>
+                                    <li>
+                                        <?= $this->url->icon('sort-numeric-desc', t('Reorder this column by date moved (DESC)'), 'TaskReorderController', 'reorderColumn', ['sort' => 'date_moved', 'direction' => 'desc', 'project_id' => $column['project_id'], 'column_id' => $column['id'], 'swimlane_id' => $swimlane['id']]) ?>
+                                    </li>
+                                    <li>
                                         <?= $this->url->icon('sort-numeric-asc', t('Reorder this column by due date (ASC)'), 'TaskReorderController', 'reorderColumn', ['sort' => 'due-date', 'direction' => 'asc', 'project_id' => $column['project_id'], 'column_id' => $column['id'], 'swimlane_id' => $swimlane['id']]) ?>
                                     </li>
                                     <li>
                                         <?= $this->url->icon('sort-numeric-desc', t('Reorder this column by due date (DESC)'), 'TaskReorderController', 'reorderColumn', ['sort' => 'due-date', 'direction' => 'desc', 'project_id' => $column['project_id'], 'column_id' => $column['id'], 'swimlane_id' => $swimlane['id']]) ?>
+                                    </li>
+                                    <li>
+                                        <?= $this->url->icon('sort-numeric-asc', t('Reorder this column by date completed (ASC)'), 'TaskReorderController', 'reorderColumn', ['sort' => 'date_completed', 'direction' => 'asc', 'project_id' => $column['project_id'], 'column_id' => $column['id'], 'swimlane_id' => $swimlane['id']]) ?>
+                                    </li>
+                                    <li>
+                                        <?= $this->url->icon('sort-numeric-desc', t('Reorder this column by date completed (DESC)'), 'TaskReorderController', 'reorderColumn', ['sort' => 'date_completed', 'direction' => 'desc', 'project_id' => $column['project_id'], 'column_id' => $column['id'], 'swimlane_id' => $swimlane['id']]) ?>
                                     </li>
                                 <?php endif ?>
                             <?php } ?>
