@@ -57,6 +57,18 @@
                             <?php if ( $this->task->projectMetadataModel->get($column['project_id'], 'SortBoardBy_Method', 'sortboardby_kb_default') == 'sortboardby_kb_default' ){ ?>
                                 <?php if ($column['nb_tasks'] > 0 && $this->user->hasProjectAccess('TaskModificationController', 'update', $column['project_id'])): ?>
                                     <li>
+                                    <?= $this->url->icon('sort-alpha-asc', t('Reorder this column by title (ASC)'), 'TaskReorderController', 'reorderColumn', ['sort' => 'title', 'direction' => 'asc', 'project_id' => $column['project_id'], 'column_id' => $column['id'], 'swimlane_id' => $swimlane['id']]) ?>
+                                    </li>
+                                    <li>
+                                        <?= $this->url->icon('sort-alpha-desc', t('Reorder this column by title (DESC)'), 'TaskReorderController', 'reorderColumn', ['sort' => 'title', 'direction' => 'desc', 'project_id' => $column['project_id'], 'column_id' => $column['id'], 'swimlane_id' => $swimlane['id']]) ?>
+                                    </li>
+                                    <li>
+                                        <?= $this->url->icon('sort-numeric-asc', t('Reorder this column by ID (ASC)'), 'TaskReorderController', 'reorderColumn', ['sort' => 'id', 'direction' => 'asc', 'project_id' => $column['project_id'], 'column_id' => $column['id'], 'swimlane_id' => $swimlane['id']]) ?>
+                                    </li>
+                                    <li>
+                                        <?= $this->url->icon('sort-numeric-desc', t('Reorder this column by ID (DESC)'), 'TaskReorderController', 'reorderColumn', ['sort' => 'id', 'direction' => 'desc', 'project_id' => $column['project_id'], 'column_id' => $column['id'], 'swimlane_id' => $swimlane['id']]) ?>
+                                    </li>
+                                    <li>
                                         <?= $this->url->icon('sort-numeric-asc', t('Reorder this column by priority (ASC)'), 'TaskReorderController', 'reorderColumn', ['sort' => 'priority', 'direction' => 'asc', 'project_id' => $column['project_id'], 'column_id' => $column['id'], 'swimlane_id' => $swimlane['id']]) ?>
                                     </li>
                                     <li>
